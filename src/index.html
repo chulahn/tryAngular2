@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='try'>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Try Angular 1.5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+
+	<script src="/js/app/app.module.js"></script>
+	<script src="/js/app/app.config.js"></script>
+
+	<script src="/js/app/blog-list/blog-list.module.js"></script>
+	<script src="/js/app/blog-list/blog-list.component.js"></script>
+
+
+	<style>
+		.new-class {
+			font-size: 72px;
+		}
+		.other-class {
+			font-size: 32px;
+		}
+		.special {
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+
+	<!--
+	<h1 class='new-class' ng-class="{'other-class': name , 'special' : name==='Chul'}">Hello, 
+		<span ng-if='name'>{{ name }}</span>
+		<span ng-if='!name'>World</span>
+	!
+	</h1>
+
+
+	<input type='text' ng-model='name' />
+
+	<p><a href="https://docs.angularjs.org/api/ng/directive/ngClass">ng-class</a>
+		<ul>
+			<li>can dynamically add class</li>
+			<li>"{'class' : condition , 'another-class' : condition==='Chul'}"</li>
+			<li> if no input, use 72px</li>
+			<li> if input, use 32px</li>
+			<li> if input is Chul, add special class</li>
+		</ul>
+	</p>
+
+	<p>
+		<ul>
+			<li>app.module.js - declaring angular module.  FIRST</li>
+			<li>app.config.js - extends the controller</li>
+		</ul>
+	</p>
+	-->
+
+	<!-- moved to blog-list.component.js COMPONENT TEMPLATE so <blog-list>durective can be used
+	<div class='' ng-controller="BlogListController">
+
+		<h1 class='new-class'>{{ title }}</h1>-title is in component
+		<p>
+			<ul>
+				<li>blog-list.module.js - declaring angular module.  FIRST</li>
+				<li>blog-list.component.js - declares controller.  can add scope for context variables.</li>
+			</ul>
+		</p>
+		<button ng-click='someClickTest()'>Click me!</button>
+	</div>
+
+	-->
+	<blog-list>
+		<!-- Shows HTML from components.template
+			controller functionality is delcared in component
+			-->
+	</blog-list>
+
+
+</body>
+</html>
